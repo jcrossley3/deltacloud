@@ -104,4 +104,6 @@ case DRIVER
     DRIVER_CLASS_NAME = "Deltacloud::Drivers::RHEVM::RHEVMDriver"
   when :rimu
     DRIVER_CLASS_NAME = "Deltacloud::Drivers::Rimu::RimuHostingDriver"
+  else
+    raise Exception.new( "Unknown driver #{DRIVER}" )
 end
